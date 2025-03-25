@@ -51,5 +51,5 @@ input_encoded = input_encoded[model.feature_names_in_]
 
 # Predict price
 if st.sidebar.button("Predict Price"):
-    prediction = model.predict(input_encoded)[0]
-    st.success(f"💰 Estimated Vehicle Price: ${prediction:,.2f}")
+    prediction = model.predict(input_encoded)[0]*85
+    st.success(f"💰 Estimated Vehicle Price: Rs.{prediction:,.2f}")
